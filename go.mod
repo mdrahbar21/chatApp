@@ -1,4 +1,4 @@
-module github.com/mdrahbar21/chatApp
+module github.com/mdrahbar21/chatApp/tree/master
 
 go 1.21.3
 
