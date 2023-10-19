@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/mdrahbar21/chatApp/middleware"
-	"github.com/mdrahbar21/chatApp/models"
-	"github.com/mdrahbar21/chatApp/utils"
+	"github.com/mdrahbar21/chatApp/tree/master/middleware"
+	"github.com/mdrahbar21/chatApp/tree/master/models"
+	"github.com/mdrahbar21/chatApp/tree/master/utils"
 )
 
 type LoginRequest struct {

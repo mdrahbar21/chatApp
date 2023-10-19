@@ -5,8 +5,8 @@ import (
 
 	"net/http"
 
-	"github.com/mdrahbar21/chatApp/routes"
-	"github.com/mdrahbar21/chatApp/utils"
+	"github.com/mdrahbar21/chatApp/tree/master/routes"
+	"github.com/mdrahbar21/chatApp/tree/master/utils"
 )
 
 func main() {

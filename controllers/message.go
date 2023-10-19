@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/mdrahbar21/chatApp/models"
-	"github.com/mdrahbar21/chatApp/utils"
+	"github.com/mdrahbar21/chatApp/tree/master/models"
+	"github.com/mdrahbar21/chatApp/tree/master/utils"
 	"github.com/gorilla/mux"
 )
 

@@ -3,8 +3,8 @@ package routes
 import (
 	"net/http"
 
-	"github.com/mdrahbar21/chatApp/controllers"
-	"github.com/mdrahbar21/chatApp/middleware"
+	"github.com/mdrahbar21/chatApp/tree/master/controllers"
+	"github.com/mdrahbar21/chatApp/tree/master/middleware"
 	"github.com/gorilla/mux"
 )
 

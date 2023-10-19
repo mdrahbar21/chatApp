@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/mdrahbar21/chatApp/config"
+	"github.com/mdrahbar21/chatApp/tree/master/config"
 	"gorm.io/gorm"
 )
 
