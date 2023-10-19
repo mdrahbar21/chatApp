@@ -11,7 +11,7 @@ import (
 func Setup() *mux.Router {
 	r := mux.NewRouter()
 	RegisterRoutes(r)
-	buildHandler := http.FileServer(http.Dir("./web/build"))
+	buildHandler := http.FileServer(http.Dir("./frontend/build"))
 	r.PathPrefix("/").Handler(buildHandler)
 	http.Handle("/", r)
 	return r

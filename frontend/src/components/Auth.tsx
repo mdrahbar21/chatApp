@@ -1,4 +1,5 @@
-import { Card, Grid, Text, Spacer, Input, Button, Tabs } from "@geist-ui/core";
+import { Card, Text, Spacer,  Button, Tabs } from "@geist-ui/core";
+import {Grid, Input} from '@geist-ui/react'
 import { ArrowRight } from "@geist-ui/icons";
 import React, { useState } from "react";
 import { postSignup, SignupParams, postLogin, LoginParams } from "../api/callbacks";
@@ -89,12 +90,12 @@ const AuthScreen: React.FC<Params> = ({ setIsAuthenticated }) => {
 								</Grid>
 								<Grid.Container gap={2} justify="center">
 									<Grid xs={6}>
-										<Input placeholder="Enter Username" onChange={(e) => { setUsername(e.target.value) }}>
+										<Input label="Username"  placeholder="Enter Username" onChange={(e) =>  setUsername(e.target.value) } {...({} as any)}>
 											Username
 										</Input>
 									</Grid>
 									<Grid xs={6}>
-										<Input.Password placeholder="Enter Password" onChange={(e) => { setPassword(e.target.value) }}>
+										<Input.Password label="Password" placeholder="Enter Password" onChange={(e) => { setPassword(e.target.value) }} >
 											Password
 										</Input.Password>
 									</Grid>
@@ -104,27 +105,27 @@ const AuthScreen: React.FC<Params> = ({ setIsAuthenticated }) => {
 										auto
 										className="info-icon text-center"
 										onClick={() => { handleLogin() }}
-										style={{ borderWidth: 0, justifyContent: "center", alignItems: "center" }}
+										style={{ borderWidth: 0, justifyContent: "center", alignItems: "center" , marginTop:'20px'}}
 									>
-										<Spacer inline w={0.1} />
+										<Spacer inline w={0.5} />
 										Signin<Spacer w={0.5} /> <ArrowRight />
 									</Button>
 								</Grid>
 							</Grid.Container>
 						</Tabs.Item>
-						<Tabs.Item label={<>Signup</>} value="2">
+						<Tabs.Item label={<>Signup</>} value="2" marginBottom={0}>
 							<Grid.Container gap={2} justify="center">
 								<Grid>
 									<Text h3>Signup</Text>
 								</Grid>
 								<Grid.Container gap={2} justify="center">
 									<Grid xs={6}>
-										<Input placeholder="Enter Name" onChange={(e) => { setName(e.target.value) }} value={name}>
+										<Input placeholder="Enter Name" onChange={(e) => { setName(e.target.value) }} value={name} marginBottom={0} {...({} as any)}>
 											Name
 										</Input>
 									</Grid>
 									<Grid xs={6}>
-										<Input placeholder="Enter Username" onChange={(e) => { setUsername(e.target.value) }} value={username}>
+										<Input placeholder="Enter Username" onChange={(e) => { setUsername(e.target.value) }} value={username} {...({} as any)}>
 											Username
 										</Input>
 									</Grid>
@@ -145,12 +146,12 @@ const AuthScreen: React.FC<Params> = ({ setIsAuthenticated }) => {
 								<Spacer />
 								<Grid.Container gap={2} justify="center">
 									<Grid xs={6}>
-										<Input placeholder="Phone Number" onChange={(e) => { setPhone(e.target.value) }} value={phone}>
+										<Input placeholder="Phone Number" onChange={(e) => { setPhone(e.target.value) }} value={phone} {...({} as any)}>
 											Phone Number
 										</Input>
 									</Grid>
 									<Grid xs={6}>
-										<Input placeholder="Designation" onChange={(e) => { setDesign(e.target.value) }} value={design}>
+										<Input placeholder="Designation" onChange={(e) => { setDesign(e.target.value) }} value={design} {...({} as any)}>
 											Designation
 										</Input>
 									</Grid>
@@ -158,7 +159,7 @@ const AuthScreen: React.FC<Params> = ({ setIsAuthenticated }) => {
 								<Spacer />
 								<Grid.Container gap={2} justify="center">
 									<Grid xs={6}>
-										<Input placeholder="Avatar URL" width="100%" onChange={(e) => { setAvatar(e.target.value) }} value={avatar}>
+										<Input placeholder="Avatar URL" width="100%" onChange={(e) => { setAvatar(e.target.value) }} value={avatar} {...({} as any)}>
 											Avatar URL
 										</Input>
 									</Grid>

@@ -18,8 +18,8 @@ interface Params {
 
 const People: React.FC<Params> = ({ setIsAuthenticated }) => {
 	const [people, setPeople] = useState<User[]>([
-		{ name: "Harshit raj", username: "rahbar", avatarURL: "https://avatars.githubusercontent.com/u/75195728?v=4", phoneNo: "8445979949", designation: "OWNER", lastLoginAt: 1326474879 },
-		{ name: "Bhuvan", username: "bangar", avatarURL: "https://avatars.githubusercontent.com/u/16359086?v=4", phoneNo: "1234567890", designation: "NON GBM", lastLoginAt: 485875689 },
+		{ name: "Md Rahbar", username: "rahbar", avatarURL: "https://avatars.githubusercontent.com/u/75195728?v=4", phoneNo: "8445979949", designation: "OWNER", lastLoginAt: 1326474879 },
+		{ name: "Aditya", username: "bangar", avatarURL: "https://avatars.githubusercontent.com/u/16359086?v=4", phoneNo: "1234567890", designation: "NON GBM", lastLoginAt: 485875689 },
 	]);
 
 	const [modalIsOpen, setModalIsOpen] = useState(false);

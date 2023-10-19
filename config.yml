@@ -1,0 +1,13 @@
+SERVER:
+  HOST: localhost
+  PORT: 8080
+
+FRONTEND:
+  URL: localhost:3000
+
+JWT:
+  SECRET: secret
+
+DATABASE:
+  NAME: "/home/ignis/Desktop/channel/mydatabase.db"
+

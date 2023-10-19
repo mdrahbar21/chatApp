@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from "axios";
 
-const BASE_URL = "localhost:3000";
+const BASE_URL = "http://localhost:8080";
 const ERROR_MESSAGE = "Error in API Call";
 
 // Interfaces
 export interface SignupParams {
   Name: string;
-  Username: string;
   Password: string;
+  Username: string;
   PhoneNo: string;
   Designation: string;
   AvatarURL: string;
@@ -58,6 +58,7 @@ const postSignup = async (params: SignupParams): Promise<Response> => {
       status = res.status;
     })
     .catch((err) => {
+      console.error("Error occurred 61:", err);
       status = err?.response?.status ?? 500;
     });
   const response: Response = {
@@ -80,6 +81,7 @@ const postLogin = async (params: LoginParams): Promise<Response> => {
       status = res.status;
     })
     .catch((err) => {
+      console.error("Error occurred 84:", err);
       payload = err?.response?.data.error ?? ERROR_MESSAGE;
       status = err?.response?.status ?? 500;
     });
@@ -107,6 +109,7 @@ const postChannel = async (channelParams: ChannelParams): Promise<Response> => {
       status = res.status;
     })
     .catch((err) => {
+      console.error("Error occurred 112:", err);
       status = err?.response?.status ?? 500;
     });
 
@@ -129,6 +132,7 @@ const getChannels = async (): Promise<Response> => {
       status = res.status;
     })
     .catch((err) => {
+      console.error("Error occurred 135:", err);
       payload = err?.response?.data.error ?? ERROR_MESSAGE;
       status = err?.response?.status ?? 500;
     });
@@ -151,6 +155,7 @@ const getAllChannels = async (): Promise<Response> => {
       status = res.status;
     })
     .catch((err) => {
+      console.error("Error occurred 158:", err);
       payload = err?.response?.data.error ?? ERROR_MESSAGE;
       status = err?.response?.status ?? 500;
     });
@@ -172,6 +177,7 @@ const deleteChannel = async (channelId: string) => {
       status = res.status;
     })
     .catch((err) => {
+      console.error("Error occurred 180:", err);
       status = err?.response?.status ?? 500;
     });
 
@@ -198,6 +204,7 @@ const getMessages = async (
       status = res.status;
     })
     .catch((err) => {
+      console.error("Error occurred 207:", err);
       payload = err?.response?.data.error ?? ERROR_MESSAGE;
       status = err?.response?.status ?? 500;
     });
@@ -229,6 +236,7 @@ const postMessage = async (message: MessageParams): Promise<Response> => {
       status = res.status;
     })
     .catch((err) => {
+      console.error("Error occurred 239:", err);
       payload = err?.response?.data.error ?? ERROR_MESSAGE;
       status = err?.response?.status ?? 500;
     });
@@ -252,6 +260,7 @@ const getUsers = async () => {
       status = res.status;
     })
     .catch((err) => {
+      console.error("Error occurred 263:", err);
       payload = err?.response?.data.error ?? ERROR_MESSAGE;
       status = err?.response?.status ?? 500;
     });
@@ -273,6 +282,7 @@ const postMembership = async (channelId: string): Promise<Response> => {
       status = res.status;
     })
     .catch((err) => {
+      console.error("Error occurred 285:", err);
       status = err?.response?.status ?? 500;
     });
 
@@ -292,6 +302,7 @@ const deleteMembership = async (channelId: string): Promise<Response> => {
       status = res.status;
     })
     .catch((err) => {
+      console.error("Error occurred 305:", err);
       status = err?.response?.status ?? 500;
     });
 

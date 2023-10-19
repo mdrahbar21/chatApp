@@ -215,7 +215,7 @@ const InsideScreen: React.FC<Params> = ({ setIsAuthenticated }) => {
 			<Card shadow width="100%" style={{ borderWidth: 0 }}>
 				<Grid.Container>
 					<Grid xs={22}>
-						<Input placeholder="Message" width="100%" onChange={(e) => { setMsg(e.target.value) }} value={msg} />
+						<Input placeholder="Message" width="100%" onChange={(e) => { setMsg(e.target.value) }} value={msg} {...({} as any)}/>
 					</Grid>
 					<Grid xs={2}>
 						<Button auto className="info-icon text-center" style={{ borderWidth: 0, justifyContent: "center", alignItems: "center" }} onClick={() => { sendMessage() }}>
@@ -274,11 +274,11 @@ const InsideScreen: React.FC<Params> = ({ setIsAuthenticated }) => {
 			>
 				<Modal.Title>Add Channel</Modal.Title>
 				<div style={{ alignContent: "flex-start", alignItems: "flex-start", textAlign: "start" }}>
-					<Input width="100%" placeholder="Enter Channel name" onChange={(e) => { setCname(e.target.value.toLowerCase()) }}>
+					<Input width="100%" placeholder="Enter Channel name" onChange={(e) => { setCname(e.target.value.toLowerCase()) }} {...({} as any)}>
 						Channel Name
 					</Input>
 					<Spacer />
-					<Input width="100%" placeholder="Enter Description" onChange={(e) => { setDescr(e.target.value) }}>
+					<Input width="100%" placeholder="Enter Description" onChange={(e) => { setDescr(e.target.value) }}{...({} as any)}>
 						Description
 					</Input>
 				</div>

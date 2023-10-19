@@ -3,7 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"net/http"
-
+	log "github.com/sirupsen/logrus"
 	"github.com/mdrahbar21/chatApp/tree/master/middleware"
 	"github.com/mdrahbar21/chatApp/tree/master/models"
 	"github.com/mdrahbar21/chatApp/tree/master/utils"
@@ -15,9 +15,9 @@ type LoginRequest struct {
 }
 
 type SignupRequest struct {
-	Username    string `json:"username"`
-	Password    string `json:"password"`
 	Name        string `json:"name"`
+	Password    string `json:"password"`
+	Username    string `json:"username"`
 	PhoneNo     string `json:"phoneNo"`
 	Designation string `json:"designation"`
 	AvatarURL   string `json:"avatarURL"`
@@ -71,6 +71,7 @@ func Signup(w http.ResponseWriter, r *http.Request) {
 
 	err = models.Signup(signupRequest.Username, signupRequest.Password, signupRequest.Name, signupRequest.PhoneNo, signupRequest.Designation, signupRequest.AvatarURL)
 	if err != nil {
+		log.Error("Error during signup: ", err) 
 		utils.RespondWithError(w, http.StatusInternalServerError, err.Error())
 		return
 	}

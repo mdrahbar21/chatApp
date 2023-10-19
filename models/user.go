@@ -3,6 +3,8 @@ package models
 import (
 	"fmt"
 	"time"
+	log "github.com/sirupsen/logrus"
+
 )
 
 type User struct {
@@ -29,13 +31,18 @@ type UserResponse struct {
 func Signup(username string, password string, name string, phoneNo string, designation string, avatarURL string) error {
 	user := User{Username: username, Password: password, Name: name, LastLoginAt: time.Now().Unix(), PhoneNo: phoneNo, Designation: designation, AvatarURL: avatarURL}
 	err := db.Create(&user).Error
-	return err
+	if err != nil {
+		log.Error("Error creating user: ", err)
+		return err
+	}
+	return nil
 }
 
 func Login(username string, password string) error {
 	user := &User{Username: username}
 	err := db.Where(&user).First(&user).Error
 	if err != nil {
+		log.Error("Error creating user: ", err)
 		return err
 	}
 
