@@ -1,11 +1,10 @@
-# chatApp
+# ChatApp
 
 **Public Chat Room System for IBY (I'm Beside You)**
 
-
 ## Developed By
 
-**Md Rahbar (B.Tech, IIT Kanpur'25)**
+**Md Rahbar (B.Tech, IIT Kanpur'25)** <br />
 mdrahbar21@iitk.ac.in
 
 ## Description
@@ -13,7 +12,7 @@ This application is a chat room system that allows people to send text messages 
 
 ## ER Diagram
 
-![image](https://github.com/mdrahbar21/chatApp/assets/95097847/1beb2055-8d93-41ae-8fa5-7a6354df3468)
+![ER Diagram](<assets/ChatApp-ER Diagram.png>)
 
 ## How to Run
 ```bash
@@ -22,7 +21,7 @@ cd chatApp
 ## build the frontend
 cd frontend
 
-## install nvm 
+## install nvm (if not installed already)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ## Either **Restart your terminal** or add nvm to your shell profile using following command (copy and paste all 3 lines at once in your terminal)
 export NVM_DIR="$HOME/.nvm"
@@ -40,6 +39,8 @@ go mod tidy
 go build -o main ./cmd/server
 ./main
 ```
+
+**Run it on http://localhost:8080**
 
 ## Tech Stack
 
@@ -117,3 +118,23 @@ CREATE TABLE "channel_users" (
 ```
 
 ## Screenshots
+
+Login Page
+![Login Page](assets/LoginPage.png)
+
+Signup Page
+![Signup Page](assets/SignupPage.png)
+
+Users View
+![Users View](assets/UserView.png)
+
+Add New ChatRoom/Channel
+![Alt text](assets/AddChannel.png)
+
+Channel View
+![Channel View](assets/ChannelView.png)
+
+ChatRoom
+![Chat Room](assets/ChatRoom.png)
+
+## Run it on localhost:8080
