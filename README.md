@@ -5,6 +5,7 @@
 ## Developed By
 
 **Md Rahbar (B.Tech, IIT Kanpur'25)** <br />
+Department: Civil Engineering <br/>
 mdrahbar21@iitk.ac.in
 
 ## Description
