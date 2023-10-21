@@ -8,7 +8,7 @@
 mdrahbar21@iitk.ac.in
 
 ## Description
-This application is a chat room system that allows people to send text messages to one another in public rooms in real-time within an organisation.  Every room has a unique name and purpose associated with it.
+This application is a chat room system that allows people to send text messages to one another in public rooms in real time within an organization.  Every room has a unique name and purpose associated with it.
 
 ## ER Diagram
 
@@ -137,4 +137,7 @@ Channel View
 ChatRoom
 ![Chat Room](assets/ChatRoom.png)
 
-## Run it on localhost:8080
+## Future Prospects
+
+1. Implement an Amber Alert System and give permission to certain roles to roll out alerts to all the users on the platform.
+2. Integrate file-sending functionality.
