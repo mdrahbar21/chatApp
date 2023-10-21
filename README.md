@@ -17,27 +17,10 @@ This application is a chat room system that allows people to send text messages 
 ## How to Run
 ```bash
 git clone https://github.com/mdrahbar21/chatApp.git
+
 cd chatApp
-## build the frontend
-cd frontend
 
-## install nvm (if not installed already)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-## Either **Restart your terminal** or add nvm to your shell profile using following command (copy and paste all 3 lines at once in your terminal)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-nvm install 16
-npm ci
-npm run build
-
-## run the server
-cd ..
-go mod download
-go mod tidy
-go build -o main ./cmd/server
-./main
+./run.sh
 ```
 
 **Run it on http://localhost:8080**
